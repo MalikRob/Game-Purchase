@@ -5,22 +5,27 @@ import com.company.model.GameItem;
 import com.company.model.GameSize;
 import com.company.model.HnS;
 
+import java.text.NumberFormat;
+
 public class Main {
 
     public static void main(String[] args) {
 
         GameItem itemA = new HnS(GameSize.M, 29.99, 2);
+        displayGameItemDetail(itemA);
+
         GameItem itemB = new FPS(GameSize.L, 59.99, 1);
+        displayGameItemDetail(itemB);
+    }
 
-        var output = String.format("Your %s, %s game will cost %s.", itemA.getSize(), itemA.getType(), itemA.getPrice());
+    private static void displayGameItemDetail (GameItem item) {
+        var totalPrice = item.getPrice() * item.getQuantity();
+        var formatter = NumberFormat.getCurrencyInstance();
+        var output = String.format("Your %s %s purchase will cost %s. Quantity: %s",
+                item.getSize(),
+                item.getType(),
+                formatter.format(totalPrice),
+                item.getQuantity());
         System.out.println(output);
-
-        var outputA = String.format("Your %s, %s game will cost %s.", itemB.getSize(), itemB.getType(), itemB.getPrice());
-        System.out.println(outputA);
-
-        /*GameItem sample = new GameItem("Hack 'n Slash", GameSize.M, 59.99,1);
-
-        var output = String.format("Your %s, %s game will cost %s.", sample.getSize(), sample.getType(), sample.getPrice());
-        System.out.println(output);*/
     }
 }
