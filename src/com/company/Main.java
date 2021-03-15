@@ -11,11 +11,26 @@ public class Main {
 
     public static void main(String[] args) {
 
-        GameItem itemA = new HnS(GameSize.M, 29.99, 2);
+        /*GameItem itemA = new HnS(GameSize.M, 29.99, 2);
         displayGameItemDetail(itemA);
 
         GameItem itemB = new FPS(GameSize.L, 59.99, 1);
-        displayGameItemDetail(itemB);
+        displayGameItemDetail(itemB);*/
+
+        GameItem[] items = {
+                new HnS(
+                        GameSize.M,
+                        29.99,
+                        2),
+                new FPS(
+                        GameSize.L,
+                        59.99,
+                        1)
+        };
+
+        for (GameItem item: items) {
+            displayGameItemDetail(item);
+        }
     }
 
     private static void displayGameItemDetail (GameItem item) {
