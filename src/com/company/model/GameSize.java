@@ -1,4 +1,4 @@
-package com.company;
+package com.company.model;
 
 public enum GameSize {
     S("Single Area"), M("Multi Stage"), L("Open World");
