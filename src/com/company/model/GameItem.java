@@ -39,7 +39,7 @@ public class GameItem {
 
     /**
      * This method returns the [type] of a GameItem object.
-     * @return
+     * @return Outputs the value at the method call.
      */
     public String getType() {
         return type;
@@ -55,7 +55,7 @@ public class GameItem {
 
     /**
      * This method returns the [size] of a GameItem object.
-     * @return
+     * @return Outputs the value at the method call.
      */
     public GameSize getSize() {
         return size;
@@ -71,7 +71,7 @@ public class GameItem {
 
     /**
      * This method returns the [price] of a GameItem object.
-     * @return
+     * @return Outputs the value at the method call.
      */
     public double getPrice() {
         return price;
@@ -87,7 +87,7 @@ public class GameItem {
 
     /**
      * This method returns the [quantity] of a GameItem object.
-     * @return
+     * @return Outputs the value at the method call.
      */
     public int getQuantity() {
         return quantity;
