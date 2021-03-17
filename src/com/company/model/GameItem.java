@@ -6,7 +6,7 @@ package com.company.model;
  *
  * @author malik
  * @version 1.0
- * @since 03/03/2021
+ * @since 03/17/2021
  */
 public class GameItem {
 
